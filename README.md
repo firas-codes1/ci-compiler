@@ -14,5 +14,5 @@ The project was originally made for the sake of learning, working on it lasted a
 
 ## Why was it made?
 
-Aside from learning, I really liked the idea of low-level programming being easier. The idea was to make a compiler that gives ### **the control of assembly while being easy to use like python **. I also like a good challenge.
+Aside from learning, I really liked the idea of low-level programming being easier. The idea was to make a compiler that gives <b>the control of assembly while being easy to use like python </b>. I also like a good challenge.
 
