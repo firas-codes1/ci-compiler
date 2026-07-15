@@ -1,0 +1,70 @@
+tokens:
+integer : INT
+floating point int : FLT
+string : STR
+function def keyword (func:) : FNC 
+minus (-) : MIN
+plus (+) : PLS
+divison (/) : DIV
+multiplication (*) : MUL
+power (^) : POR 
+negate  (~) : NEG
+while keyword : WIL
+if keyword : IFT
+else keyword : ELS
+not (!) : NOT
+equal (=) : EQU
+equal (==) : EQ2
+not equal (!=) : NEQ
+equal or greater (=<) : GEQ
+equal or lesser (=>) : LEQ
+greater (<) : GRT
+lesser (>) : LES
+or (||) : ORT
+and (&&) : AND
+comma (,) : CMA
+byte keyword : BYT 
+word keyword : WRD
+dword keyword : DWR
+return keyword : RET
+increase by 1 (++) : INC 
+decrease by 1 (--) : DEC
+[ : SB1
+] : SB2
+( : LPR
+) : RPR
+{ : BR1 
+} : BR2
+; : TRM
+newline : NEW
+pointer (&) : PTR 
+address of (&>) : AOD
+identifier : IDT 
+shift bits right (->) : SHR
+shift bits left (<-) : SHL
+rotate bits right (|>) : ROR
+rotate  bits left (|<): ROL
+shift bytes right ( shr() ) : SRF
+shift bytes left ( shl() ) : SLF
+rotate bytes right ( ror() ) : RRF
+rotate bytes left ( rol() ) : RLF 
+convert to integer ( int() ) : 2NT
+convert to string ( str() ) : 2TR
+input keyword : NPT
+print ( print() ) : PRN
+true keyword : TRU 
+false keyword : FLS
+null keyword : NUL
+system call (sys:) : SYS 
+push ( push() ) : PSH
+pop ( pop() ) : POP
+":" : DOT 
+
+lexical analyzer reads the file byte by byte 
+and compares every byte to keywords , instructions and operators
+if byte matches first  byte of a keyword it saves the file pointer in stack , reads another byte and compares it with next byte of keyword 
+if it doesnt match , it restores the file pointer from stack and considers the given an id 
+when finds a keyword/instruction/operator it puts token 
+any integer/identifier/string is terminated in generated file with null byte (0xa)
+
+ 

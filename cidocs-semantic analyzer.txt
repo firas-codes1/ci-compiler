@@ -1,0 +1,19 @@
+semantic analyzer reads tokens just like syntax analyzer 
+and by observing syntax rules you can conclude the semantic rules 
+
+when it finds "VAR" or register then "EQU" :
+it reads next token and checks its type (if its an id or func call it also checks) 
+if type was string , it reads to check if there is any boolean or comparison , if found then variable type is integer 
+else , its string
+
+u cant use math operators with strings 
+int() cant include integers
+str() cant include strings (from syntax rules u can see that it doesnt expect string at begining)
+
+semantic analyzer locates memory for variables , arrays and functions arguments 
+the result is used by code generator 
+in the runtime based version of the compiler array values are always considered integers because compiler doesnt know whats the type of selected value , yet it cant know if array is out of bound 
+
+you cant define a function inside a function 
+define every variable/array/function before using them 
+variables are different than pointers , once u define a pointer it wont be recognized as an id 
